@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  web:
+    container_name: web
+    build: ./vite-react-ts
+    ports:
+      - 3000:3000
+    volumes:
+      - ./vite-react-ts:/app
+
+  backend:
+    container_name: backend
+    build: ./express-ts
+    ports:
+      - 1337:1337
+    volumes:
+      - ./express-ts:/app
